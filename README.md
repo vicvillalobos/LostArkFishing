@@ -23,6 +23,7 @@ This is a simple fishing bot for Lost Ark. It uses OpenCV to detect the exclamat
 ## Planned features
 - [ ] Support for multiple monitors
 - [ ] Automatic resolution detection
+- [ ] Hotkey to start/stop/exit the bot
 - [ ] Pet function tool repair (repairs the fishing rod after a certain number of casts)
 
 ## Disclaimer
