@@ -16,7 +16,6 @@ class TimerAction(AutomatedAction):
         Constructor
         Accepts parameter data as a dictionary for use on execution.
         """
-        self.config = config # Not used atm
         self.time = time
         self.range_ms = range
 

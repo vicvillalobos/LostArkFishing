@@ -68,8 +68,8 @@ class ScreenMatchLoopAction(AutomatedAction):
                 # We found a good enough match!
                 print("Found a fish!")
                 return True
-            else:
-                print(f'No fish found. Sample: {max_val}')
+            # else:
+            #     print(f'No fish found. Sample: {max_val}')
 
             # Wait for the interval
             time.sleep(self.interval) 
