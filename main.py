@@ -124,9 +124,11 @@ def start_fish_detection(template, region, threshold, interval):
     First we wait 5 seconds for the player to get ready, then we enter the main loop.
     In the main loop, we will press the fishing key, wait for a couple of seconds 
     (to avoid detecting mistakes before the camera puts the lure in the center), and then
-    start the detection loop. The detection loop will run for a maximum of {max_reel_timeout} seconds,
-    and if no fish is detected, it will press the fishing key again and end the detection loop.
-    If a fish is detected in the detection loop, it will press the fishing key to reel it in and stop the detection loop.
+    start the detection loop. 
+    
+    The detection loop will run for a maximum of {max_reel_timeout} seconds,
+    and if no fish are detected in that time, it will press the fishing key again and end the loop.
+    If a fish is detected, the script will press the fishing key to reel it in and then stop the detection loop.
     
     After the detection loop ends, the main loop will wait for {reel_wait} seconds 
     (wait for the reel animation + cooldown) before starting again.
@@ -179,6 +181,11 @@ def start_fish_detection(template, region, threshold, interval):
         active = True
 
     # End of main loop
+
+    #TODO: Improve the algorithm by using a recursive function (with a conditional) instead of a while True loop.
+    # i.e.
+    # if some_condition:
+    #   fish_detection(template, region, threshold, interval)
 
 
 # Start the script
