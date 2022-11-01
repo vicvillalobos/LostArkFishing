@@ -13,7 +13,7 @@ This is a simple fishing bot for Lost Ark. It uses OpenCV to detect the exclamat
 
 ## Usage
 1. Activate virtual environment (if you set one up)
-2. Run the bot with `python main.py` (in the project directory)
+2. Run the bot with `python fish.py` in the project directory.
 3. You have 5 seconds to switch to the game window and point the cursor at the fishing spot. The Trade Skill mode must be active (B).
 
 ## Notes
@@ -21,7 +21,6 @@ This is a simple fishing bot for Lost Ark. It uses OpenCV to detect the exclamat
 - The bot will run endlessly, so you will have to stop it manually by pressing Ctrl+C in the terminal.
 
 ## Planned features
-- [ ] Support for multiple monitors
 - [ ] Automatic resolution detection
 - [ ] Hotkey to start/stop/exit the bot
 - [ ] Pet function tool repair (repairs the fishing rod after a certain number of casts)
