@@ -11,7 +11,7 @@ class TimerAction(AutomatedAction):
     - range -> int: the range of the random delay in milliseconds. e.g. 1000 will add a random number between -1 and 1 seconds to the timer.
     Execution shouldn't return anything.
     """
-    def __init__(self, config: Configuration, time: int, range: int = 500, *args, **kwargs):
+    def __init__(self, time: int, range: int = 500, *args, **kwargs):
         """
         Constructor
         Accepts parameter data as a dictionary for use on execution.

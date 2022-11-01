@@ -18,16 +18,16 @@ class FishingTask(AutomatedTask):
     """
 
     def __init__(self, config, *args, **kwargs):
-        human_hold_range = (50, 300) # https://stackoverflow.com/questions/22505698/what-is-a-typical-keypress-duration
+
+        self.config = config
 
         # Define the actions that will be performed in this task.
         self.actions = [
-            TimerAction(config, 5, 0),
             KeyPressAction(config, config.fishing_key),
-            TimerAction(config, 2, 0),
+            TimerAction(2, 0),
             ScreenMatchLoopAction(config),
             KeyPressAction(config, config.fishing_key),
-            TimerAction(config, 10, 1000)
+            TimerAction(10, 1000)
         ]
 
     def run_once(self):
@@ -41,6 +41,9 @@ class FishingTask(AutomatedTask):
         """
         Run the task in a loop.
         """
+
+        # Wait 5 seconds before starting the task.
+        TimerAction(5, 0).execute()
         
         while True:
             super().run()
