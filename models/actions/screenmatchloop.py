@@ -11,12 +11,7 @@ class ScreenMatchLoopAction(AutomatedAction):
         """
         Constructor
         parameters:
-        - region -> tuple(int,int): the region resolution to take the screenshot in pixels.
-        - screen_number -> int: the screen number to take the screenshot from.
-        - template -> str: the path to the image to match.
-        - threshold -> float: the threshold to use for the match.
-        - interval -> float: the interval to wait between each screenshot.
-        - max_time -> float: the maximum time to wait for a match.
+        - config -> Configuration: the configuration object.
         """
         self.config = config
         self.region_resolution = config.fishing_region
