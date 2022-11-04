@@ -5,6 +5,7 @@ This is a simple fishing bot for Lost Ark. It uses OpenCV to detect the exclamat
 ## Requirements
 - Python 3.6+
 - PIP
+- virtualenv or conda (optional, recommended)
 
 ## Installation
 1. Clone the repository
@@ -12,9 +13,11 @@ This is a simple fishing bot for Lost Ark. It uses OpenCV to detect the exclamat
 3. Install requirements with `pip install -r requirements.txt`
 
 ## Usage
-1. Activate virtual environment (if you set one up)
-2. Run the bot with `python fish.py` in the project directory.
-3. You have 5 seconds to switch to the game window and point the cursor at the fishing spot. The Trade Skill mode must be active (B).
+1. Open a terminal
+2. Activate virtual environment (if you set one up)
+3. Make sure `config.ini` has the correct resolution and monitor identification number.
+4. Run the bot with `python fish.py` in the project directory.
+5. You have 5 seconds to switch to the game window and point the cursor at the fishing spot. The Trade Skill mode must be active (B).
 
 ## Notes
 - For the time being, the bot will only work in the main monitor.
