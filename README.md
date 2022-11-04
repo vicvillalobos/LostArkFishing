@@ -8,8 +8,8 @@ This is a simple fishing bot for Lost Ark. It uses OpenCV to detect the exclamat
 - virtualenv or conda (optional, recommended)
 
 ## Download
-- Option 1: Click the green clone button of the repository in Github and select `Download ZIP` and extract in a directory of your choice.
-- Option 2: Clone the repository using git
+- **Option 1**: Click the green clone button of the repository in Github, select `Download ZIP` and extract in a directory of your choice.
+- **Option 2**: Clone the repository using git
 
 ## Installation
 2. Set up virtual environment (Recommended)
