@@ -24,7 +24,7 @@ This is a simple fishing bot for Lost Ark. It uses OpenCV to detect the exclamat
 6. You have 5 seconds to switch to the game window and point the cursor at the fishing spot. The Trade Skill mode must be active (B).
 
 ## Pet Function Auto Repair
-If you have pet function enabled (with Crystalline Aura), you can enable auto repair in `config.ini` by setting `times_to_repair` to a value higher than 0. The bot will automatically repair your tools after the specified number of fish is caught.  
+If you have pet function enabled (with Crystalline Aura), you can enable auto repair in `config.ini` by setting `times_to_repair` to a value higher than 0. The bot will automatically repair your tools after the specified number of fish are caught.  
  
 Setting `times_to_repair` to 0 will disable auto repair.
 
