@@ -23,9 +23,12 @@ class Configuration:
         self.fishing_interval = float(self.config['FISHING']['interval'])
         self.fishing_max_time = int(self.config['FISHING']['max_time'])
         self.fishing_template = self.config['FISHING']['template']
+        self.times_to_repair = int(self.config['FISHING']['times_to_repair'])
 
         # Input
         self.human_hold_range = (int(self.config['INPUT']['hold_min']), int(self.config['INPUT']['hold_max']))
+        self.human_mouse_movement_range = int(self.config['INPUT']['mouse_move_range'])
+        self.human_mouse_movement_duration_range = int(self.config['INPUT']['mouse_move_duration_range'])
 
         
 

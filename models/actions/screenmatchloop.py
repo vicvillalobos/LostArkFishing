@@ -7,7 +7,7 @@ from models.configuration import Configuration
 
 class ScreenMatchLoopAction(AutomatedAction):
 
-    def __init__(self, config: Configuration, *args, **kwargs):
+    def __init__(self, config: Configuration, task, *args, **kwargs):
         """
         Constructor
         parameters:
@@ -21,6 +21,7 @@ class ScreenMatchLoopAction(AutomatedAction):
         self.threshold = config.fishing_threshold
         self.interval = config.fishing_interval
         self.max_time = config.fishing_max_time
+        self.task = task
 
     def grab_screen(self):
         """
@@ -67,6 +68,7 @@ class ScreenMatchLoopAction(AutomatedAction):
             if max_val > self.threshold:
                 # We found a good enough match!
                 print("Found a fish!")
+                self.task.record_attempt(True)
                 return True
             # else:
             #     print(f'No fish found. Sample: {max_val}')
@@ -81,4 +83,5 @@ class ScreenMatchLoopAction(AutomatedAction):
             if time_elapsed > self.max_time:
                 # We have exceeded the max time
                 print("No fish found")
+                self.task.record_attempt(False)
                 return False
