@@ -24,8 +24,9 @@ class TimerAction(AutomatedAction):
         """
         This method will wait for the time specified in the parameters.
         """
+        range = (random.randint(-self.range_ms, self.range_ms) / 1000)
 
-        print("Waiting for " + str(self.time) + " seconds")
+        print("Waiting for " + str(self.time + range) + " seconds")
 
         # wait for the timer + a random number between -range_ms and range_ms, all divided by 1000.
-        time.sleep(self.time + (random.randint(-self.range_ms, self.range_ms) / 1000))
+        time.sleep(self.time + range)
