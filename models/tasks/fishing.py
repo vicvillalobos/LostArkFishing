@@ -30,7 +30,7 @@ class FishingTask(AutomatedTask):
             TimerAction(2, 0),
             ScreenMatchLoopAction(config, self),
             KeyPressAction(config, config.fishing_key),
-            TimerAction(10, 1000)
+            TimerAction(9, 2000)
         ]
 
         self.attempt_history = []
@@ -65,6 +65,9 @@ class FishingTask(AutomatedTask):
     def last_attempt(self):
         return self.attempt_history[-1] if len(self.attempt_history) > 0 else False
 
+    def reset_attempts(self):
+        self.attempt_history = []
+
     def is_finished(self, max_attempts):
         return self.successful_attempts >= max_attempts and max_attempts != 0
 
@@ -86,5 +89,6 @@ class FishingTask(AutomatedTask):
             if self.last_attempt:
                 self.life_energy_remaining -= energy_required
                 self.leap_essence_remaining -= energy_required
+                print(f"Attempt successful. Life energy remaining: {self.life_energy_remaining}, Leap essence remaining: {self.leap_essence_remaining}")
 
             print("Fish caught: " + str(self.successful_attempts))

@@ -14,6 +14,7 @@ repair_task = RepairToolsTask(config)
 while fishing_task.has_energy:
     fishing_task.loop(config.times_to_repair)
     repair_task.run_once()
+    fishing_task.reset_attempts()
 
 print('')
 print('Not enough life energy.')
