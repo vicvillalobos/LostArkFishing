@@ -11,7 +11,7 @@ class TimerAction(AutomatedAction):
     - range -> int: the range of the random delay in milliseconds. e.g. 1000 will add a random number between -1 and 1 seconds to the timer.
     Execution shouldn't return anything.
     """
-    def __init__(self, time: int, range: int = 500, *args, **kwargs):
+    def __init__(self, time: float, range: int = 500, *args, **kwargs):
         """
         Constructor
         Accepts parameter data as a dictionary for use on execution.
@@ -24,9 +24,15 @@ class TimerAction(AutomatedAction):
         """
         This method will wait for the time specified in the parameters.
         """
+        self.check_termination()
         range = (random.randint(-self.range_ms, self.range_ms) / 1000)
 
-        print("Waiting for " + str(self.time + range) + " seconds")
+        result = self.time + range
+        if result < 0:
+            result = 0
+
+        print("Waiting for " + str(result) + " seconds")
 
         # wait for the timer + a random number between -range_ms and range_ms, all divided by 1000.
-        time.sleep(self.time + range)
+        time.sleep(result)
+        self.check_termination()

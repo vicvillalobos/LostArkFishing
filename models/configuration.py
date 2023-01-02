@@ -29,7 +29,13 @@ class Configuration:
         self.human_hold_range = (int(self.config['INPUT']['hold_min']), int(self.config['INPUT']['hold_max']))
         self.human_mouse_movement_range = int(self.config['INPUT']['mouse_move_range'])
         self.human_mouse_movement_duration_range = int(self.config['INPUT']['mouse_move_duration_range'])
-
+        self.inventory_key = self.config['INPUT']['inventory_key']
+        # UI
+        self.ui_mail_icon_position = (int(self.config['UI']['mail_icon_x']), int(self.config['UI']['mail_icon_y']))
+        self.ui_first_mail_position = (int(self.config['UI']['first_mail_x']), int(self.config['UI']['first_mail_y']))
+        self.ui_mail_accept_position = (int(self.config['UI']['mail_accept_x']), int(self.config['UI']['mail_accept_y']))
+        self.ui_mail_remove_position = (int(self.config['UI']['mail_remove_x']), int(self.config['UI']['mail_remove_y']))
+        self.ui_inventory_close_button_position = (int(self.config['UI']['inventory_close_button_x']), int(self.config['UI']['inventory_close_button_y']))
         
 
     def get(self, section, key):

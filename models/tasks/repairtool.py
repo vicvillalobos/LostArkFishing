@@ -30,7 +30,7 @@ class RepairToolsTask(AutomatedTask):
         self.actions = [
             KeyPressAction(config, 'alt+p'),
             TimerAction(1, 0),
-            MouseMoveAction(config, 262, 162, 0.2),
+            MouseMoveAction(config, 267, 162, 0.2),
             TimerAction(1, 0),
             MouseClickAction(config, MouseClickAction.MOUSE_BUTTON_LEFT),
             TimerAction(1, 0),

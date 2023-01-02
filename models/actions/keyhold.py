@@ -22,6 +22,7 @@ class KeyHoldAction(AutomatedAction):
         """
         This method will press and hold the key specified in the parameters.
         """
+        self.check_termination()
 
         print("Holding key: " + self.key)
 

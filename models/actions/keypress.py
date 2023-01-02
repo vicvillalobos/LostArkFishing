@@ -23,6 +23,7 @@ class KeyPressAction(AutomatedAction):
         """
         This method will press the key specified in the parameters.
         """
+        self.check_termination()
 
         print("Pressing key: " + self.key)
 

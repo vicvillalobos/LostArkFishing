@@ -19,6 +19,8 @@ class MouseClickAction(AutomatedAction):
         Constructor
         Accepts parameter data as a dictionary for use on execution.
         """
+        self.check_termination()
+        
         self.config = config
         self.button = button
         self.duration_range = config.human_hold_range
@@ -31,5 +33,5 @@ class MouseClickAction(AutomatedAction):
         range = self.duration_range
         duration = random.randint(range[0], range[1]) / 1000
 
-        print("Clicking mouse button " + str("left" if self.button == 0 else "right"))
+        print("Clicking mouse button " + str(self.button))
         pyautogui.click(button=self.button, duration=duration)

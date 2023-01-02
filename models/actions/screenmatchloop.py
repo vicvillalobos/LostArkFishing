@@ -55,6 +55,7 @@ class ScreenMatchLoopAction(AutomatedAction):
         time_elapsed = 0
 
         while True:
+            self.check_termination()
             screen = self.grab_screen()
 
             # read template image

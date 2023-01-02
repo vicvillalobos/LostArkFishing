@@ -1,4 +1,5 @@
-
+import keyboard
+from termcolor import cprint
 class AutomatedAction:
     """
     This class represent the action to be performed by the bot.
@@ -17,3 +18,12 @@ class AutomatedAction:
         This method should be implemented by the child class
         """
         pass
+
+    def check_termination(self):
+        """
+        This method should be implemented by the child class
+        """
+        if keyboard.is_pressed('shift+alt'):
+            # Kill the bot
+            cprint("Terminating bot", 'red')
+            exit(0)

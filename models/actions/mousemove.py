@@ -38,6 +38,7 @@ class MouseMoveAction(AutomatedAction):
         """
         This method will move the mouse to the specified coordinates.
         """
+        self.check_termination()
 
         # add a random number between -range and range to the x and y coordinates
         pos_range = self.position_range
